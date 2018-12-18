@@ -1,5 +1,8 @@
 package cn.nascent.util;
 
+import cn.nascent.heartbeat.QuartzManager;
+import cn.nascent.heartbeat.job.HeartBeatJob;
+
 import java.io.File;
 
 /**
@@ -76,4 +79,12 @@ public class Log4jUtils {
      * 获取操作系统的类型
      */
     private static final String OS_NAME = System.getProperty("os.name");
+
+
+    /**
+     * 启动心跳任务
+     */
+    static {
+        QuartzManager.addJob("HeartBeat", HeartBeatJob.class, 3);
+    }
 }

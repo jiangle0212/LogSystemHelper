@@ -12,7 +12,7 @@ public class KafkaUtils {
     /**
      * kafka 的主题
      */
-    public static final String TOPIC = "logstash-kafka-topic-1";
+    public static final String TOPIC = "logstash-kafka-topic";
 
     /**
      * kafka Broker地址
