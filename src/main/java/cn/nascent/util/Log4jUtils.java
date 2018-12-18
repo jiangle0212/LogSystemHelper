@@ -76,4 +76,26 @@ public class Log4jUtils {
      * 获取操作系统的类型
      */
     private static final String OS_NAME = System.getProperty("os.name");
+
+
+    /**
+     * 开始心跳机制
+     */
+    static {
+        Thread heartBeat = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("HeartBeat------------------------<<<<<<>>>>>");
+                try {
+                    Thread.sleep(300);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        heartBeat.setDaemon(true);
+        System.out.println("HeartBeat");
+        heartBeat.start();
+    }
 }

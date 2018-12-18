@@ -20,11 +20,4 @@ public class KafkaUtils {
     public static final String BROKER_LIST = "192.168.80.176:9092";
 
 
-    /**
-     * 开始心跳机制
-     */
-    static {
-
-    }
-
 }
