@@ -10,7 +10,7 @@ package cn.nascent.util;
 public class KafkaUtils {
 
     /**
-     * kafka 的主题
+     * 使用Log4j输出的日志相关的kafka主题
      */
     public static final String TOPIC = "logstash-kafka-topic";
 
@@ -18,6 +18,12 @@ public class KafkaUtils {
      * kafka Broker地址
      */
     public static final String BROKER_LIST = "192.168.80.176:9092";
+
+
+    /**
+     * 发送心跳信息到这个topic下
+     */
+    public static final String HEARTBEAT_TOPIC = "heartbeat-kafka-topic";
 
 
 }

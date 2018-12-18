@@ -10,7 +10,7 @@ import java.util.concurrent.Semaphore;
 
 public class MoreThreadTest {
     public static final Integer threadCount = 3;
-    public static final Integer totalCount = 100;
+    public static final Integer totalCount = 200;
     public static final Logger log = Logger.getLogger(MoreThreadTest.class);
 
     public static void main(String[] args) throws InterruptedException {
@@ -35,6 +35,8 @@ public class MoreThreadTest {
                     }
                 }
             });
+
+            Thread.sleep(500);
 
         }
 
