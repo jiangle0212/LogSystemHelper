@@ -1,4 +1,4 @@
-package cn.nascent.heartbeat;
+package cn.nascent.heartbeat.quartz;
 
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;

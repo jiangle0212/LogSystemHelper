@@ -46,7 +46,7 @@ public class HeartBeatJob implements Job {
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
 
         /**
-         * @TODO 在发送消息之前，还需要判断应用还存活
+         * @TODO 在发送消息之前，还需要判断应用还存活或者应用挂掉了发送特定的消息去停止相应的定时任务
          */
 
 

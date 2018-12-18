@@ -1,6 +1,6 @@
 package cn.nascent.test;
 
-import cn.nascent.heartbeat.QuartzManager;
+import cn.nascent.heartbeat.quartz.QuartzManager;
 import org.apache.log4j.Logger;
 
 import java.util.concurrent.CountDownLatch;

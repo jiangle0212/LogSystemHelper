@@ -1,6 +1,6 @@
 package cn.nascent.util;
 
-import cn.nascent.heartbeat.QuartzManager;
+import cn.nascent.heartbeat.quartz.QuartzManager;
 import cn.nascent.heartbeat.job.HeartBeatJob;
 
 import java.io.File;
