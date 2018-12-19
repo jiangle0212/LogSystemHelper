@@ -41,7 +41,7 @@ public class MoreThreadTest {
         }
 
         countDownLatch.await();
-        QuartzManager.removeJob("HeartBeat");
+       // QuartzManager.removeJob("HeartBeat");
 
         executorService.shutdown();
     }
