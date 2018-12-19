@@ -50,7 +50,7 @@ public class Log4jUtils {
                     File fileUtil = new File(".");
                     String absolutePath = fileUtil.getAbsolutePath();
                     String[] paths = absolutePath.split(getSeparator());
-                    Log4jUtils.PROJECT_NAME = paths[paths.length - 2].toLowerCase() + "  :  ";
+                    Log4jUtils.PROJECT_NAME = paths[paths.length - 2].toLowerCase() + ":  ";
                 }
             }
         }

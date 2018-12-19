@@ -15,7 +15,7 @@ public class QuartzManager {
     /**
      * 调度器工厂
      */
-    private static final SchedulerFactory schedulerFactory = new StdSchedulerFactory();
+    private static final SchedulerFactory SCHEDULER_FACTORY = new StdSchedulerFactory();
     /**
      * 默认的任务组名
      */
@@ -38,7 +38,7 @@ public class QuartzManager {
         try {
 
 
-            Scheduler scheduler = new StdSchedulerFactory().getScheduler();
+            Scheduler scheduler = QuartzManager.SCHEDULER_FACTORY.getScheduler();
             JobKey jobKey = new JobKey(jobName, QuartzManager.JOB_GROUP_NAME);
             JobDetail jobDetail = JobBuilder.newJob(jobClazz).withIdentity(jobKey).build();
             Trigger trigger = TriggerBuilder.newTrigger().withIdentity(jobName, QuartzManager.TRIGGER_GROUP_NAME).
@@ -68,7 +68,7 @@ public class QuartzManager {
 
         try {
 
-            Scheduler scheduler = QuartzManager.schedulerFactory.getScheduler();
+            Scheduler scheduler = QuartzManager.SCHEDULER_FACTORY.getScheduler();
             JobKey jobKey = new JobKey(jobName, jobGroupName);
             JobDetail jobDetail = JobBuilder.newJob(jobClazz).withIdentity(jobKey).build();
             Trigger trigger = TriggerBuilder.newTrigger().withIdentity(triggerName, triggerGroupName).
@@ -98,7 +98,7 @@ public class QuartzManager {
         JobKey jobKey = JobKey.jobKey(jobName, QuartzManager.JOB_GROUP_NAME);
 
         try {
-            Scheduler scheduler = QuartzManager.schedulerFactory.getScheduler();
+            Scheduler scheduler = QuartzManager.SCHEDULER_FACTORY.getScheduler();
             Trigger trigger = scheduler.getTrigger(triggerKey);
 
             if (trigger == null) {
@@ -135,7 +135,7 @@ public class QuartzManager {
         JobKey jobKey = JobKey.jobKey(jobName, jobGroupName);
 
         try {
-            Scheduler scheduler = QuartzManager.schedulerFactory.getScheduler();
+            Scheduler scheduler = QuartzManager.SCHEDULER_FACTORY.getScheduler();
             Trigger trigger = scheduler.getTrigger(triggerKey);
 
             if (trigger == null) {
