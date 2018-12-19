@@ -53,7 +53,7 @@ public class HeartBeatJob implements Job {
         System.err.println("I am a HeartBeat packet");
 
         Future<RecordMetadata> response = HeartBeatJob.KAFKA_PRODUCER.send(new ProducerRecord<String, String>(KafkaUtils.HEARTBEAT_TOPIC,
-                (HeartBeatJob.HEARTBEAT_MESS + System.currentTimeMillis())));
+                HeartBeatJob.HEARTBEAT_MESS));
 
         try {
 
