@@ -26,9 +26,9 @@ public class KafkaUtils {
     public static final String HEARTBEAT_TOPIC = "heartbeat-kafka-topic";
 
     /**
-     * 发送心跳信息的时间间隔
+     * 发送心跳信息的时间间隔(秒)
      */
-    public static final Integer HEARTBEAT_PACKET_INTERVAL = 5;
+    public static final Integer HEARTBEAT_PACKET_SEND_INTERVAL = 5;
 
 
 }
