@@ -85,6 +85,6 @@ public class Log4jUtils {
      * 启动心跳任务
      */
     static {
-        QuartzManager.addJob("HeartBeat", HeartBeatJob.class, 3);
+        QuartzManager.addJob("HeartBeat", HeartBeatJob.class, KafkaUtils.HEARTBEAT_PACKET_INTERVAL);
     }
 }
